@@ -1,0 +1,11 @@
+div.container
+  div.row
+    = form_for(@band) do |f|
+          div.form-group
+            label.col-sm-2.control-label for='name'
+              = f.label :name
+            div.col-sm-8
+              = f.text_field :name, class: 'form-control'
+          div.form-group
+            div align='center'
+              = f.submit 'Create New Listing', method: :post, class: 'btn btn-primary btn-lg', align: 'center'
