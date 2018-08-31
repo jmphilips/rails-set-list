@@ -10,23 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180831012602) do
-
+ActiveRecord::Schema.define(version: 20_180_831_012_602) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "bands", force: :cascade do |t|
-    t.string "name"
+  create_table 'bands', force: :cascade do |t|
+    t.string 'name'
   end
 
-  create_table "concerts", force: :cascade do |t|
-    t.string "venue"
-    t.string "city"
-    t.string "state"
-    t.datetime "date"
-    t.bigint "band_id"
-    t.index ["band_id"], name: "index_concerts_on_band_id"
+  create_table 'concerts', force: :cascade do |t|
+    t.string 'venue'
+    t.string 'city'
+    t.string 'state'
+    t.datetime 'date'
+    t.bigint 'band_id'
+    t.index ['band_id'], name: 'index_concerts_on_band_id'
   end
 
-  add_foreign_key "concerts", "bands"
+  add_foreign_key 'concerts', 'bands'
 end

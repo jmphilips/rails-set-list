@@ -14,7 +14,7 @@ class BandsController < ApplicationController
   def create
     create_band(params)
     @bands = Band.all
-    render action: "index"
+    render action: 'index'
   end
 
   private
