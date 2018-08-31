@@ -1,1 +1,5 @@
-h1 #{@band.name}
+div.container
+  h1 #{@band.name}
+  - @band.concerts.each do |concert|
+    h2 #{concert.venue}
+    p #{concert.city}, #{concert.state}
