@@ -1,0 +1,37 @@
+div.container
+  div.row
+    div.container
+      = form_for(@concert) do |f|
+        div.row
+          div.form-group
+            label.col-sm-3.control-label for='band'
+          div.col-sm-9
+            = f.collection_select(:band_id, Band.all, :id, :name)
+        div.row
+          div.form-group
+            label.col-sm-3.control-label for='venue'
+              = f.label :venue
+            div.col-sm-9
+              = f.text_field :venue, class: 'form-control'
+        div.row
+          div.form-group
+            label.col-sm-3.control-label for='city'
+              = f.label :city
+            div.col-sm-9
+              = f.text_field :city, class: 'form-control'
+        div.row
+          div.form-group
+            label.col-sm-3.control-label for='state'
+              = f.label :state
+            div.col-sm-9
+              = f.text_field :state, class: 'form-control'
+        div.row
+          div.form-group
+            label.col-sm-3.control-label for='date'
+              = f.label :date
+            div.col-sm-9
+              = f.date_field :date, class: 'form-control'
+        div.row
+          div.form-group
+            div align='center'
+              = f.submit 'Create New Listing', method: :post, class: 'btn btn-primary btn-lg', align: 'center'
