@@ -1,4 +1,8 @@
 div.container
   h1 Concerts
+  = link_to "Add Concert", new_concert_path
   - @concerts.each do |concert|
     h2 #{concert.venue}
+    h3 #{concert.band.name}
+    h3 #{concert.date}
+    br
