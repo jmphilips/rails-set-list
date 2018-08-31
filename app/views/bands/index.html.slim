@@ -1,4 +1,5 @@
 div.container
   h1 Bands
+  = link_to 'Add Band', new_band_path
   - @bands.each do |band|
     h2 #{band.name}
