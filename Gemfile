@@ -18,7 +18,6 @@ gem 'slim'
 gem 'bootswatch-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
-gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
