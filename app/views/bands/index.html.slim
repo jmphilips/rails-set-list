@@ -1,5 +1,8 @@
 div.container
   h1 Bands
   = link_to 'Add Band', new_band_path
-  - @bands.each do |band|
-    h2 #{band.name}
+  ul.list-group
+    - @bands.each do |band|
+      li.list-group-item.d-flex.justify-content-between.align-items-center
+        h4
+          = link_to "#{band.name}", band_path(band)
