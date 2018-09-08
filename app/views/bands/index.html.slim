@@ -1,6 +1,6 @@
 div.container
   h1 Bands
-  = link_to 'Add Band', new_band_path
+  = link_to 'Add Band', new_band_path, class: 'btn btn-primary'
   ul.list-group
     - @bands.each do |band|
       li.list-group-item.d-flex.justify-content-between.align-items-center

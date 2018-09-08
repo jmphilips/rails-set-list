@@ -1,10 +1,10 @@
 div.container
   h1 Concerts
-  = link_to "Add Concert", new_concert_path
-  - @concerts.each do |concert|
-    div
-      div.card.border-primary
-        div.card-header #{concert.band.name}
-        div.card.body
-          h4.card.title #{concert.venue}
-          p.card-text #{concert.date}
+  = link_to "Add Concert", new_concert_path, class: 'btn btn-primary'
+  ul.list-group
+    - @concerts.each do |concert|
+      li.list-group-item.d-flex.justify-content-between.align-items-center
+        h4
+          = link_to "#{concert.band.name}", concert_path(concert)
+        p #{concert.venue}
+        p #{concert.date}
